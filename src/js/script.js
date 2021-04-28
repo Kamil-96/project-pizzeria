@@ -198,6 +198,7 @@
 
       thisWidget.getElements(element);
       thisWidget.initActions();
+      thisWidget.value = settings.amountWidget.defaultValue;
       thisWidget.setValue(thisWidget.input.value);
     }
     getElements(element){
@@ -211,15 +212,13 @@
     setValue(value){
       const thisWidget = this;
 
-      thisWidget.value = settings.amountWidget.defaultValue;
       const newValue = parseInt(value);
-
+      
       /* TO DO: Add validation */
       if(thisWidget.value !== newValue && !isNaN(newValue) && value >= settings.amountWidget.defaultMin && value <= settings.amountWidget.defaultMax){
         thisWidget.value = newValue;
       }
       
-      thisWidget.value = newValue;
       thisWidget.input.value = thisWidget.value;
       
       thisWidget.announce();
