@@ -403,7 +403,7 @@
       
       thisCart.totalPrice = thisCart.subTotalPrice + thisCart.deliveryFee;
       
-      if(thisCart.totalPrice !== 0){
+      if(thisCart.subTotalPrice !== 0){
         thisCart.dom.deliveryFee.innerHTML = thisCart.deliveryFee;
         for(let totalPrice of thisCart.dom.totalPrice){
           totalPrice.innerHTML = thisCart.totalPrice;
