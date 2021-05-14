@@ -8,7 +8,7 @@ class Product{
       
     thisProduct.id = id;
     thisProduct.data = data;
-      
+    
     thisProduct.renderInMenu();
     thisProduct.getElements();
     thisProduct.initAccordion();

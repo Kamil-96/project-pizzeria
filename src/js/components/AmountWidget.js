@@ -11,7 +11,6 @@ class AmountWidget extends BaseWidget{
     thisWidget.initActions();
     //thisWidget.value = settings.amountWidget.defaultValue;
     //thisWidget.setValue(thisWidget.dom.input.value);
-    //console.log('AmountWidget:', thisWidget);
   }
   getElements(){
     const thisWidget = this;
@@ -28,8 +27,9 @@ class AmountWidget extends BaseWidget{
   }
   renderValue(){
     const thisWidget = this;
-
+    
     thisWidget.dom.input.value = thisWidget.value;
+    
   }
   initActions(){
     const thisWidget = this;
