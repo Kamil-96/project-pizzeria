@@ -48,6 +48,11 @@ export const select = {
     form: '.booking-form',
     starters: '[name="starter"]',
   },
+  home: {
+    order: '.order-online',
+    booking: '.book-table',
+    carousel: '.main-carousel',
+  },
   nav: {
     links: '.main-nav a',
   },
