@@ -182,7 +182,7 @@ class Booking {
     });
     thisBooking.dom.wrapper.addEventListener('updated', function(){
       thisBooking.updateDOM();
-      //thisBooking.removeSelected();
+      thisBooking.removeSelected();
     });
     thisBooking.dom.form.addEventListener('submit', function(event){
       event.preventDefault();
@@ -196,12 +196,13 @@ class Booking {
     for(let table of thisBooking.dom.tables){
       table.addEventListener('click', function(event){
         event.preventDefault();
-      
+        
         if(table.classList.contains('booked')){
           alert('This table is already booked. Choose another one.');
         } else{
           const tableId = parseInt(table.getAttribute(settings.booking.tableIdAttribute));
           thisBooking.selectedTable === tableId;
+          
           if(thisBooking.selectedTable){
             thisBooking.removeSelected();
           } else{
