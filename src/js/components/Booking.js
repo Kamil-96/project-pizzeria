@@ -114,6 +114,8 @@ class Booking {
   
       thisBooking.booked[date][hourBlock].push(table);
     }
+
+    thisBooking.updateDOM();
   }
   updateDOM(){
     const thisBooking = this; 
@@ -254,6 +256,8 @@ class Booking {
     };
     
     fetch(url, options);
+    
+    thisBooking.makeBooked(payload.date, payload.hour, payload.duration, payload.table);
   }
 }
 
